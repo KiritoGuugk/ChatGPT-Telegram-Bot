@@ -21,9 +21,8 @@ def start(update, context): # 当用户输入/start时，返回文本
         # reply_markup=ForceReply(selective=True),
     )
     message = (
-        "我是人见人爱的 ChatGPT\~\n\n"
-        "欢迎访问 https://github\.com/yym68686/ChatGPT\-Telegram\-Bot 查看源码\n\n"
-        "有 bug 可以联系 @yym68686"
+        "我是您的Rbq\~\n\n"
+        
     )
     update.message.reply_text(message, parse_mode='MarkdownV2')
 
@@ -62,9 +61,9 @@ def escaped(str):
 
 def process_message(update, context):
     chat_text = update.message.text
-    if chat_text.startswith(" "):
+    if chat_text.startswith("。"):
         chat_id = update.effective_chat.id
-        chat_text = chat_text.split(" ")[1].strip()
+        chat_text = chat_text.split("。")[1].strip()
         print(update.effective_user.username, update.effective_user.id, chat_text)
         response_msg = ''
         try:
